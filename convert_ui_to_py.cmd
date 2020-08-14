@@ -1,0 +1,1 @@
+pyside2-uic src\bc_generator_qt.ui > src\bc_generator_qt_design.py
