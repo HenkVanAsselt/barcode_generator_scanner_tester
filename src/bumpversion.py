@@ -7,7 +7,7 @@ Read the file buildinfo.txt
 The contents should look like
 
 [DEFAULT]
-name = AndroidConfig
+name = Auto_Code128_Barcode Generator
 version = 0.51.0001
 date = 20190302 09:37:40
 
@@ -22,6 +22,8 @@ date = 201900302 09:40:32
 
 """
 
+# Global imports
+import os
 import configparser
 import datetime
 
@@ -56,6 +58,8 @@ if __name__ == "__main__":
 
     filename = "version_to_env.cmd"
     with open(filename, "w") as cmdfile:
-        cmdfile.write(f"set AC_version={new_version}\n")
-        cmdfile.write(f"set AC_date={datestr}\n")
+        cmdfile.write(f"set EXE_version={new_version}\n")
+        cmdfile.write(f"set EXE_date={datestr}\n")
         print(f"{filename} has been updated")
+
+

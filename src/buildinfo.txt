@@ -1,5 +1,5 @@
 [DEFAULT]
 name = Barcode generator scanner tester
-version = 1.00.0003
+version = 1.00.0026
 date = 20200814
 

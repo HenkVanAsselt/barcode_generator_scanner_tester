@@ -44,6 +44,11 @@ pytest:
 exe:
 	make_exe.cmd
 
+bumpversion:
+	cd ./src && python bumpversion.py
+	.\src\version_to_env.cmd
+
+
 #sphinx:
 #	cd doc\sphinx-autodoc & make clean & make html & cd ...
 

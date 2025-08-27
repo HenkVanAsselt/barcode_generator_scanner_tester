@@ -8,9 +8,9 @@ import logging
 import configparser
 
 # Libray imports
-from PySide2.QtWidgets import QApplication, QMainWindow
-from PySide2.QtCore import Slot, QTimer, SIGNAL
-from PySide2.QtGui import QPixmap
+from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtCore import Slot, QTimer, SIGNAL
+from PySide6.QtGui import QPixmap
 import code128
 import PIL
 
@@ -24,6 +24,15 @@ def get_version(filename="buildinfo.txt") -> str:
 
     :param filename: The file to inspect
     :returns: String with version number
+
+    This file is expected to have the following format:
+    ::
+
+        [DEFAULT]
+        name = Barcode generator scanner tester
+        version = 1.00.0003
+        date = 20200814
+
     """
 
     config = configparser.ConfigParser()
@@ -53,7 +62,7 @@ def generate_barcode(counter=0):
 
     # Resize the image to maximum 640x120
     maxsize = (640, 120)
-    pil_image.thumbnail(maxsize, PIL.Image.ANTIALIAS)
+    pil_image.thumbnail(maxsize, PIL.Image.LANCZOS)
 
     filename = 'generated_barcode.jpg'
     pil_image.save(filename)
