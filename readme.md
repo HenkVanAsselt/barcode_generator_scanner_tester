@@ -1,9 +1,8 @@
-# Barcode generator for scanner testing
+# Barcode generator for barcode scanner testing
 
 ## Purpose
 
-This software has been written to test a barcode scanner over a long period
-of time.
+This software has been written to test a barcode scanner over a long period of time.
 
 Just scanning random barcodes might not lead to the point were the problem actually appears, and does
 not lead to a stable reproduction method.
@@ -20,5 +19,5 @@ The barcodes will contain a sequence number and the current time.
 
 ## Requirements
 
-This project is writting in Python3 and makes use of 
+This project is writting in Python3 and makes use of PySide6 for the GUI
 

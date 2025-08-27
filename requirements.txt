@@ -1,4 +1,4 @@
-pyside2         # For the QT5 GUI
+pyside6         # For the QT6 GUI
 code128         # See https://pypi.org/project/code128/
 Pillow          # Python Image Library
 pyinstaller     # To make the single executable

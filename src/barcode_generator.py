@@ -106,7 +106,7 @@ class MainWindow(QMainWindow):
         try:
             self.delay = int(self.gui.lineEdit_IterationDelay.text())
         except ValueError:
-            self.delay = 1000   # Fall back to a standard 1 second delay
+            self.delay = 1000   # Fall back to a standard 1-second delay
 
     # -----------------------------------------------------------------------------
     # @dumpFuncname
@@ -155,7 +155,7 @@ class MainWindow(QMainWindow):
         """This function is called when the generation timer expires.
 
         It will generate a barcode with the current counter, and the current date and time.
-        The it will display it in the lable, and show the contents in a text window.
+        It will display the barcode, and the data in a text window.
 
         :returns: Nothing
         """
@@ -204,7 +204,7 @@ def main():
     app = QApplication(sys.argv)
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
 
 
 # -----------------------------------------------------------------------------
